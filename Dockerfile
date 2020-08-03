@@ -1,10 +1,10 @@
-FROM alpine:3.7
-MAINTAINER Christophe Tafani-Dereeper <christophe@tafani-dereeper.me>
+FROM alpine:3.11
+MAINTAINER Stiefmeister (forked from Christophe Tafani-Dereeper <christophe@tafani-dereeper.me>)
 
 #--
 #-- Build variables
 #--
-ARG DUPLICACY_VERSION=2.3.0
+ARG DUPLICACY_VERSION=2.6.1
 
 #--
 #-- Environment variables
@@ -16,7 +16,7 @@ ENV BACKUP_SCHEDULE='* * * * *' \
     BACKUP_ENCRYPTION_KEY='' \
     BACKUP_IMMEDIATLY='no' \
     BACKUP_IMMEDIATELY='no' \
-    DUPLICACY_BACKUP_OPTIONS='-threads 4 -stats' \
+    DUPLICACY_BACKUP_OPTIONS='-threads 1 -stats' \
     DUPLICACY_INIT_OPTIONS='' \
     AWS_ACCESS_KEY_ID='' \
     AWS_SECRET_KEY='' \
@@ -27,6 +27,7 @@ ENV BACKUP_SCHEDULE='* * * * *' \
     HUBIC_TOKEN_FILE='' \
     SSH_PASSWORD='' \
     SSH_KEY_FILE='' \
+    SSH_KEY_PASSWORD='' \
     DROPBOX_TOKEN='' \
     AZURE_KEY='' \
     GCD_TOKEN='' \
