@@ -43,7 +43,7 @@ RUN apk --no-cache add ca-certificates && update-ca-certificates
 RUN wget https://github.com/gilbertchen/duplicacy/releases/download/v${DUPLICACY_VERSION}/duplicacy_linux_x64_${DUPLICACY_VERSION} -O /usr/bin/duplicacy && \
     chmod +x /usr/bin/duplicacy
 
-RUN mkdir /usr/bin/.duplicacy
+#RUN mkdir /usr/bin/.duplicacy
 
 RUN mkdir /app
 WORKDIR /app
