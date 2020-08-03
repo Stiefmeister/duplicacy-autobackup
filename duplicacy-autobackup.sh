@@ -69,7 +69,7 @@ export DUPLICACY_WASABI_KEY=$WASABI_KEY
 export DUPLICACY_WASABI_SECRET=$WASABI_SECRET
 
 if [[ "$1" == "init" ]]; then
-  if [[ ! /app/.duplicacy/preferences ]]; then
+  if [[ ! -f /app/.duplicacy/preferences ]]; then
     do_init
   else
     echo 'This folder has already been initialized with duplicacy. Not initializing again'
