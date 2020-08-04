@@ -38,7 +38,10 @@ ENV BACKUP_SCHEDULE='* * * * *' \
 #--
 #-- Other steps
 #--
+RUN apk update
+RUN apk upgrade
 RUN apk --no-cache add ca-certificates && update-ca-certificates
+RUN apk add --update tzdata
 RUN wget https://github.com/gilbertchen/duplicacy/releases/download/v${DUPLICACY_VERSION}/duplicacy_linux_x64_${DUPLICACY_VERSION} -O /usr/bin/duplicacy && \
     chmod +x /usr/bin/duplicacy
 
