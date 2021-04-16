@@ -4,7 +4,7 @@ MAINTAINER Stiefmeister (forked from Christophe Tafani-Dereeper <christophe@tafa
 #--
 #-- Build variables
 #--
-ARG DUPLICACY_VERSION=2.6.1
+ARG DUPLICACY_VERSION=2.7.2
 
 #--
 #-- Environment variables
